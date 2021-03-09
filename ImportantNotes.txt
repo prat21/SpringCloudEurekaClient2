@@ -19,4 +19,6 @@ Alternatively, instead of defining a fixed port, we can let the Spring Boot appl
 
 server.port=0
 
+So, each time we start the spring boot app,it will assign a random available port to the instance. Thus spinning up multiple instances for an application.
+
 Reference: https://www.baeldung.com/spring-boot-running-port
