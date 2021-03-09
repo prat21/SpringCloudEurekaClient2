@@ -10,3 +10,13 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
 by giving different port numbers to spin up multiple instances in different ports.
 
 Now hit client2 from client and monitor the consoles of the three instances. You will see the instances load balanced.
+
+-----------------------------------------------------------------
+
+Running a spring boot app on random ports:
+
+Alternatively, instead of defining a fixed port, we can let the Spring Boot application run on a random port by setting “0” as the value of the “server.port” property:
+
+server.port=0
+
+Reference: https://www.baeldung.com/spring-boot-running-port
