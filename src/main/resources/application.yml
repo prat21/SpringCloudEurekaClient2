@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: My-Client2
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${server.port}}}

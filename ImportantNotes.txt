@@ -2,7 +2,7 @@ This is the microservice, which is going to be consumed by SpringCloudEurekaClie
 In order to test load balancing(and elimination of inactive service ids in eureka server) and all those things, 
 we need to spin up three or more instances of this microservice.
 
-One instance is going to be started in eclipse itself. In order to start the other 2 or more instances, we need to open command prompt,
+One instance is going to be started in intellij itself. In order to start the other 2 or more instances, we need to open command prompt,
 go to the directory "SpringCloudEurekaClient2" and type the below command:
 
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8085
@@ -22,3 +22,7 @@ server.port=0
 So, each time we start the spring boot app,it will assign a random available port to the instance. Thus spinning up multiple instances for an application.
 
 Reference: https://www.baeldung.com/spring-boot-running-port
+------------------------------------------------------------------
+Third option:
+
+Run all the instances from intellij itself by creating new run configurations with different program arguments specifying different server ports (--server.port=8085 for example).
